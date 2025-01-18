@@ -170,8 +170,8 @@ const farms: FarmConfig[] = [
     97: '',
     56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
   },
-  quoteTokenSymbol: QuoteToken.MANGO,
-  quoteTokenAdresses: contracts.mango,
+  quoteTokenSymbol: QuoteToken.BUSD,
+  quoteTokenAdresses: contracts.busd,
 },
 {
   pid: 20,
@@ -186,8 +186,8 @@ const farms: FarmConfig[] = [
     97: '',
     56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
   },
-  quoteTokenSymbol: QuoteToken.KITTY,
-  quoteTokenAdresses: contracts.kitty,
+  quoteTokenSymbol: QuoteToken.BUSD,
+  quoteTokenAdresses: contracts.busd,
 },
 
 ]
