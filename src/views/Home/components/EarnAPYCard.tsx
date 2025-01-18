@@ -6,7 +6,7 @@ import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
-import { BLOCKS_PER_YEAR, KIWI_PER_BLOCK, KIWI_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR, MANGO_PER_BLOCK, MANGO_POOL_PID } from 'config'
 
 const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
@@ -38,13 +38,13 @@ const EarnAPYCard = () => {
 
   const calculateAPY = useCallback(
     (farmsToDisplay) => {
-      const mangoPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === KIWI_POOL_PID)?.tokenPriceVsQuote || 0)
+      const mangoPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === MANGO_POOL_PID)?.tokenPriceVsQuote || 0)
 
       farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const mangoRewardPerBlock = KIWI_PER_BLOCK.times(farm.poolWeight)
+        const mangoRewardPerBlock = MANGO_PER_BLOCK.times(farm.poolWeight)
         const mangoRewardPerYear = mangoRewardPerBlock.times(BLOCKS_PER_YEAR)
 
         let apy = mangoPriceVsBNB.times(mangoRewardPerYear).div(farm.lpTotalInQuoteToken)

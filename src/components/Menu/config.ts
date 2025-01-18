@@ -30,30 +30,26 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/pools',
   },
+
   {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: '/lottery',
-  },
-  {
-    label: 'Info',
+    label: 'More Farms',
     icon: 'InfoIcon',
     items: [
       {
-        label: 'Overview',
-        href: 'https://info.cheeseswap.app',
+        label: 'PIZZA',
+        href: 'https://pizza.cheeseswap.app',
       },
       {
-        label: 'Tokens',
-        href: 'https://info.cheeseswap.app/token/0xcfdf8a80fecaeecc144fa74c0df8691bfd0e26e3',
+        label: 'KIWI',
+        href: 'https://kiwi.cheeseswap.app',
       },
       {
-        label: 'Pairs',
-        href: 'https://info.cheeseswap.app/pair/0xdf8481f4ffb688d940f59f839c2613cc6c40a79e',
+        label: 'HOTS',
+        href: 'https://hots.cheeseswap.app',
       },
       {
-        label: 'Accounts',
-        href: 'https://info.cheeseswap.app/accounts',
+        label: 'CNFT',
+        href: 'https://cnft.cheeseswap.app',
       },
     ],
   },
@@ -63,7 +59,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/mangofinance',
+        href: 'https://github.com/bitbd83/mango-finance',
       },
     ],
   },

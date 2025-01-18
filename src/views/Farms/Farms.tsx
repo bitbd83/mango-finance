@@ -5,7 +5,7 @@ import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
 import { Image, Heading } from '@mangofarm/uikit'
-import { BLOCKS_PER_YEAR, KIWI_PER_BLOCK, KIWI_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR, MANGO_PER_BLOCK, MANGO_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import { useFarms, usePriceBnbBusd, usePriceMangoBusd } from 'state/hooks'
@@ -41,12 +41,12 @@ const Farms: React.FC = () => {
   // to retrieve assets prices against USD
   const farmsList = useCallback(
     (farmsToDisplay, removed: boolean) => {
-      const mangoPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === KIWI_POOL_PID)?.tokenPriceVsQuote || 0)
+      const mangoPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === MANGO_POOL_PID)?.tokenPriceVsQuote || 0)
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const mangoRewardPerBlock = KIWI_PER_BLOCK.times(farm.poolWeight)
+        const mangoRewardPerBlock = MANGO_PER_BLOCK.times(farm.poolWeight)
         const mangoRewardPerYear = mangoRewardPerBlock.times(BLOCKS_PER_YEAR)
 
         let apy = mangoPriceVsBNB.times(mangoRewardPerYear).div(farm.lpTotalInQuoteToken)
