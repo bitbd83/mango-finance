@@ -47,8 +47,8 @@ const farms: FarmConfig[] = [
         97: '',
         56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
       },
-      quoteTokenSymbol: QuoteToken.MANGO,
-      quoteTokenAdresses: contracts.mango,
+      quoteTokenSymbol: QuoteToken.KITTY,
+      quoteTokenAdresses: contracts.kitty,
     },
      {
           pid: 21,
@@ -62,8 +62,8 @@ const farms: FarmConfig[] = [
             97: '',
             56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
           },
-          quoteTokenSymbol: QuoteToken.MANGO,
-          quoteTokenAdresses: contracts.mango,
+          quoteTokenSymbol: QuoteToken.PUP,
+          quoteTokenAdresses: contracts.pup,
         },
 
     {
@@ -81,6 +81,7 @@ const farms: FarmConfig[] = [
      quoteTokenSymbol: QuoteToken.USDT,
      quoteTokenAdresses: contracts.usdt,
    },
+
     {
    pid: 4,
    lpSymbol: 'MANGO-CHS LP',
@@ -96,6 +97,7 @@ const farms: FarmConfig[] = [
    quoteTokenSymbol: QuoteToken.CHS,
    quoteTokenAdresses: contracts.chs,
  },
+ 
  {
   pid: 5,
   lpSymbol: 'MANGO-PIZZA LP',
@@ -127,6 +129,7 @@ const farms: FarmConfig[] = [
  quoteTokenSymbol: QuoteToken.BUSD,
  quoteTokenAdresses: contracts.busd,
 },
+
 {
  pid: 6,
  lpSymbol: 'ETH-BUSD LP',
@@ -142,6 +145,7 @@ const farms: FarmConfig[] = [
  quoteTokenSymbol: QuoteToken.BUSD,
  quoteTokenAdresses: contracts.busd,
 },
+
 {
  pid: 7,
  lpSymbol: 'USDT-BNB LP',
@@ -157,13 +161,14 @@ const farms: FarmConfig[] = [
  quoteTokenSymbol: QuoteToken.BNB,
  quoteTokenAdresses: contracts.wbnb,
 },
+
 {
   pid: 11,
   isTokenOnly: true,
   lpSymbol: 'MANGO',
   lpAddresses: {
     97: '',
-    56: '0xE5fE53149A278aF40ACb04334c4140eE7444BE4B', // EGG-BUSD LP
+    56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
   },
   tokenSymbol: 'MANGO',
   tokenAddresses: {
@@ -173,13 +178,14 @@ const farms: FarmConfig[] = [
   quoteTokenSymbol: QuoteToken.BUSD,
   quoteTokenAdresses: contracts.busd,
 },
+
 {
   pid: 20,
   isTokenOnly: true,
   lpSymbol: 'KITTY',
   lpAddresses: {
     97: '',
-    56: '0x5b4963B964bAc5C2Db83e53ffFe46E0cb83a1346', // EGG-BUSD LP
+    56: '0x5b4963B964bAc5C2Db83e53ffFe46E0cb83a1346',
   },
   tokenSymbol: 'KITTY',
   tokenAddresses: {

@@ -1,7 +1,7 @@
 import { PoolConfig, QuoteToken, PoolCategory } from './types'
 
 const pools: PoolConfig[] = [
-  {
+/*  {
   juiceId: 0,
  tokenName: 'MANGO',
   stakingTokenName: QuoteToken.MANGO,
@@ -17,7 +17,7 @@ stakingTokenAddress: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
    sortOrder: 1,
     isFinished: false,
   tokenDecimals: 18,
-  },
+}, */
 
 ]
 

@@ -9,11 +9,11 @@ export default {
   },
   mangoChef: {
     97: '',
-    56: '0x3B9B74f48E89Ebd8b45a53444327013a2308A9BC',
+    56: '0xB8c0B207a2eC0FB7011FAF2F5d7Fb98D2222fF98',
   },
   mangoChefBnb: {
     97: '',
-    56: '0x3B9B74f48E89Ebd8b45a53444327013a2308A9BC',
+    56: '0xB8c0B207a2eC0FB7011FAF2F5d7Fb98D2222fF98',
   },
   wbnb: {
     97: '',
