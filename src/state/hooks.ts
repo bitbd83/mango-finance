@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmsPublicDataAsync, fetchPoolsPublicDataAsync, fetchPoolsUserDataAsync } from './actions'
@@ -13,7 +13,8 @@ export const useFetchPublicData = () => {
   const { slowRefresh } = useRefresh()
   useEffect(() => {
     dispatch(fetchFarmsPublicDataAsync())
-    }, [dispatch, slowRefresh])
+    // dispatch(fetchPoolsPublicDataAsync())
+  }, [dispatch, slowRefresh])
 }
 
 // Farms
@@ -74,9 +75,10 @@ export const usePriceBnbBusd = (): BigNumber => {
 
 export const usePriceMangoBusd = (): BigNumber => {
   const pid = 1 // MANGO-BNB LP
-  const bnbPriceUSD = usePriceBnbBusd()
+   const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
   return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+
 }
 
 export const useTotalValue = (): BigNumber => {
@@ -92,10 +94,6 @@ export const useTotalValue = (): BigNumber => {
         val = bnbPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.MANGO) {
         val = mangoPrice.times(farm.lpTotalInQuoteToken)
-      }else if (farm.quoteTokenSymbol === QuoteToken.KITTY) {
-        val = bnbPrice.times(farm.lpTotalInQuoteToken)
-      }else if (farm.quoteTokenSymbol === QuoteToken.PUP) {
-        val = bnbPrice.times(farm.lpTotalInQuoteToken)
       }else{
         val = farm.lpTotalInQuoteToken
       }

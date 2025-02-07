@@ -30,10 +30,11 @@ export interface Ifo {
   'DAI' = 'DAI',
   'ETH' = 'ETH',
   'USDC' = 'USDC',
-  'CAKE' = 'CAKE',
   'JUICE' = 'JUICE',
   'KITTY' = 'KITTY',
-  'PUP' = 'PUP'
+  'PUP' = 'PUP',
+  'CAKE' = 'CAKE',
+  'ANKR' = 'ANKR',
 }
 
 

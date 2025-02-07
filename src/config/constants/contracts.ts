@@ -59,9 +59,17 @@ export default {
     97: '',
     56: '0xCfDf8A80fECAeeCC144fa74c0Df8691BFd0e26e3',
   },
+  ankr: {
+    97: '',
+    56: '0xf307910A4c7bbc79691fD374889b36d8531B08e3',
+  },
   usdc: {
     97: '',
     56: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+  },
+  cake: {
+    97: '',
+    56: '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
   },
   eth: {
     97: '',
